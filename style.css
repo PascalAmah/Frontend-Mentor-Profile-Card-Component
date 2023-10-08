@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --DarkCyan: hsl(185, 75%, 39%);
+  --VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+  --DarkGrayishBlue: hsl(227, 10%, 46%);
+  --DarkGray: hsl(0, 0%, 59%);
+  --White : hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--DarkCyan);
+  background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+  background-position: right 50vw bottom 40vh, left 50vw top 50vh;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 400px;
+  background-color: var(--White);
+  border-radius: 20px;
+  box-shadow: 0 60px 80px rgba(0,0,0,.16);
+}
+
+.profile-banner {
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.profile-banner-image {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  transition: transform .9s ease;
+}
+
+.card:hover .profile-banner-image {
+  transform: scale(1.4) translateX(-15px);
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 5px solid var(--White);
+  position: absolute;
+  top: 23%;
+  left: 37%;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.profile {
+  margin: 60px 0 40px 0;
+  text-align: center;
+}
+
+h1, h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 5px;
+}
+
+span {
+  font-weight: 400;
+}
+
+p {
+  font-size: 15px;
+  margin: 5px;
+}
+
+hr {
+  margin: 50px 0 20px 0;
+}
+
+.profile-stats {
+  padding: 0 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile-stats p {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.attribution {
+  font-size: 15px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 376px) {
+  body {
+    background-position: right 50vw bottom 40vh, left 45vw top 40vh;
+  }
+}
+
